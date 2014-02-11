@@ -116,7 +116,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     device/htc/msm8660-common/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
-    device/htc/msm8660-common/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw
+    device/htc/msm8660-common/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw \
+    device/htc/msm8660-common/firmware/fw_bcmdhd.bin:system/etc/firmware/fw_bcmdhd.bin \
+    device/htc/msm8660-common/firmware/fw_bcmdhd_apsta.bin:system/etc/firmware/fw_bcmdhd_apsta.bin \
+    device/htc/msm8660-common/firmware/fw_bcmdhd_p2p.bin:system/etc/firmware/fw_bcmdhd_p2p.bin
 
 
 # Device uses high-density artwork where available
@@ -126,14 +129,10 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # Common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
-    debug.enabletr=true \
     debug.egl.hw=1 \
-    debug.mdpcomp.maxlayer=0 \
-    debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     ro.opengles.version=131072 \
-    ro.bq.gpu_to_cpu_unsupported=1 \
     debug.egl.recordable.rgba8888=1
 
 # call the proprietary setup
